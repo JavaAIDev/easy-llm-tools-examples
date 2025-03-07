@@ -25,9 +25,9 @@ public class ToolsController {
     return new ChatOutput(content);
   }
 
-  @PostMapping("/exchangeRate")
-  public ChatOutput exchangeRate(@RequestBody ChatInput chatInput) {
-    var content = chatClient.prompt().user(chatInput.input()).functions("latestBaseCurrencyGet")
+  @PostMapping("/canadaHolidays")
+  public ChatOutput canadaHolidays(@RequestBody ChatInput chatInput) {
+    var content = chatClient.prompt().user(chatInput.input()).functions("holidays")
         .call().content();
     return new ChatOutput(content);
   }

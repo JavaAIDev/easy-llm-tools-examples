@@ -3,9 +3,9 @@ package com.javaaidev.easyllmtools.example;
 import com.javaaidev.easyllmtools.integration.springai.ToolsFunctionCallbackResolver;
 import com.javaaidev.easyllmtools.tools.mytool.GetWeather;
 import com.javaaidev.easyllmtools.tools.mytool.GetWeatherFactory;
-import com.javaaidev.easyllmtools.tools.mytool.api.DefaultApiAgentToolkit.AgentToolFactory_latestBaseCurrencyGet;
-import com.javaaidev.easyllmtools.tools.mytool.api.DefaultApiAgentToolkit.AgentTool_latestBaseCurrencyGet;
-import com.javaaidev.easyllmtools.tools.mytool.api.DefaultApiToolConfiguration;
+import com.javaaidev.easyllmtools.tools.mytool.api.HolidaysApiAgentToolkit.AgentToolFactory_holidays;
+import com.javaaidev.easyllmtools.tools.mytool.api.HolidaysApiAgentToolkit.AgentTool_holidays;
+import com.javaaidev.easyllmtools.tools.mytool.api.HolidaysApiToolConfiguration;
 import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherConfiguration;
 import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherConfiguration.TemperatureUnit;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
@@ -30,8 +30,8 @@ public class AppConfiguration {
   }
 
   @Bean
-  public AgentTool_latestBaseCurrencyGet getExchangeRate() {
-    return new AgentToolFactory_latestBaseCurrencyGet().create(new DefaultApiToolConfiguration());
+  public AgentTool_holidays getCanadaHolidays() {
+    return new AgentToolFactory_holidays().create(new HolidaysApiToolConfiguration());
   }
 
   @Bean

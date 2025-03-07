@@ -64,7 +64,7 @@
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
-      <artifactId>exchange-rate</artifactId>
+      <artifactId>canada-holidays</artifactId>
       <version>0.1.0</version>
     </dependency>
   </dependencies>
