@@ -32,6 +32,13 @@ public class ToolsController {
     return new ChatOutput(content);
   }
 
+  @PostMapping("/nytimes")
+  public ChatOutput nytimes(@RequestBody ChatInput chatInput) {
+    var content = chatClient.prompt().user(chatInput.input()).functions("sectionFormatGet")
+        .call().content();
+    return new ChatOutput(content);
+  }
+
   public record ChatInput(String input) {
 
   }

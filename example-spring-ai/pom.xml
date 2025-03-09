@@ -67,6 +67,11 @@
       <artifactId>canada-holidays</artifactId>
       <version>0.1.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.javaaidev.easyllmtools.tools</groupId>
+      <artifactId>nytimes</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
 
 </project>
