@@ -1,9 +1,9 @@
-package com.javaaidev.easyllmtools.tools.mytool;
+package com.javaaidev.easyllmtools.tools.getweather;
 
-import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherConfiguration;
-import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherParameters;
-import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherReturnType;
-import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherReturnType.TemperatureUnit;
+import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration;
+import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherParameters;
+import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherReturnType;
+import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherReturnType.TemperatureUnit;
 import java.lang.reflect.Type;
 
 public class GetWeather extends AbstractGetWeather {

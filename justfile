@@ -10,6 +10,7 @@ generateCodeGetWeather: build downloadCodeGeneratorCli
     java -jar target/code-generator-cli.jar simple \
       --output=tool-get-weather-fake \
       --artifact-id=get-weather --artifact-version=0.1.0 \
+      --package-name=com.javaaidev.easyllmtools.tools.getweather \
       get-weather.json
 
 installGetWeather:

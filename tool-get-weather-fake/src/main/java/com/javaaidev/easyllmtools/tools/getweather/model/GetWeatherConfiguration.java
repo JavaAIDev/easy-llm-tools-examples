@@ -1,5 +1,5 @@
 
-package com.javaaidev.easyllmtools.tools.mytool.model;
+package com.javaaidev.easyllmtools.tools.getweather.model;
 
 import java.util.HashMap;
 import java.util.Map;

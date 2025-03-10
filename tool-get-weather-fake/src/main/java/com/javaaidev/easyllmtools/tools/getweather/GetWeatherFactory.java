@@ -1,7 +1,7 @@
-package com.javaaidev.easyllmtools.tools.mytool;
+package com.javaaidev.easyllmtools.tools.getweather;
 
 import com.javaaidev.easyllmtools.agenttoolspec.ToolFactory;
-import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherConfiguration;
+import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration;
 
 public class GetWeatherFactory implements ToolFactory<GetWeather, GetWeatherConfiguration> {
 

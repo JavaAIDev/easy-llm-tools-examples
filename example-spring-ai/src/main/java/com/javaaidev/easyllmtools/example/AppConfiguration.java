@@ -4,10 +4,10 @@ import com.javaaidev.easyllmtools.integration.springai.ToolsFunctionCallbackReso
 import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiAgentToolkit.AgentToolFactory_holidays;
 import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiAgentToolkit.AgentTool_holidays;
 import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiToolConfiguration;
-import com.javaaidev.easyllmtools.tools.mytool.GetWeather;
-import com.javaaidev.easyllmtools.tools.mytool.GetWeatherFactory;
-import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherConfiguration;
-import com.javaaidev.easyllmtools.tools.mytool.model.GetWeatherConfiguration.TemperatureUnit;
+import com.javaaidev.easyllmtools.tools.getweather.GetWeather;
+import com.javaaidev.easyllmtools.tools.getweather.GetWeatherFactory;
+import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration;
+import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration.TemperatureUnit;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiAgentToolkit.AgentToolFactory_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiAgentToolkit.AgentTool_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiToolConfiguration;
