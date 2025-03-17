@@ -14,7 +14,7 @@ generateCodeGetWeather: build downloadCodeGeneratorCli
       get-weather.json
 
 installGetWeather:
-    mvn -B -ntp -f examples/tool-get-weather-fake/pom.xml install
+    mvn -B -ntp -f tool-get-weather-fake/pom.xml install
 
 generateCodeCanadaHolidays: build downloadCodeGeneratorCli
     java -jar target/code-generator-cli.jar openapi \
