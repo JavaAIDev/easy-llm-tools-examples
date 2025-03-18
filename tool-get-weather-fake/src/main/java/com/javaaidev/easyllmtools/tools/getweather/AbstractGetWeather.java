@@ -1,11 +1,11 @@
 package com.javaaidev.easyllmtools.tools.getweather;
 
-import com.javaaidev.easyllmtools.agenttoolspec.Tool;
+import com.javaaidev.easyllmtools.llmtoolspec.Tool;
 import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration;
 import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherParameters;
 import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherReturnType;
 
-public abstract class AbstractGetWeather implements Tool<GetWeatherParameters, GetWeatherReturnType, GetWeatherConfiguration> {
+public abstract class AbstractGetWeather implements Tool<GetWeatherParameters, GetWeatherReturnType> {
 
     protected GetWeatherConfiguration config;
 

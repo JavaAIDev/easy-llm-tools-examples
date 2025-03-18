@@ -1,15 +1,15 @@
 package com.javaaidev.easyllmtools.example;
 
 import com.javaaidev.easyllmtools.integration.springai.ToolsFunctionCallbackResolver;
-import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiAgentToolkit.AgentToolFactory_holidays;
-import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiAgentToolkit.AgentTool_holidays;
+import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiLLMToolkit.LLMToolFactory_holidays;
+import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiLLMToolkit.LLMTool_holidays;
 import com.javaaidev.easyllmtools.tools.canadaholidays.api.HolidaysApiToolConfiguration;
 import com.javaaidev.easyllmtools.tools.getweather.GetWeather;
 import com.javaaidev.easyllmtools.tools.getweather.GetWeatherFactory;
 import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration;
 import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration.TemperatureUnit;
-import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiAgentToolkit.AgentToolFactory_sectionFormatGet;
-import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiAgentToolkit.AgentTool_sectionFormatGet;
+import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMToolFactory_sectionFormatGet;
+import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMTool_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiToolConfiguration;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.model.function.DefaultFunctionCallbackResolver;
@@ -33,16 +33,16 @@ public class AppConfiguration {
   }
 
   @Bean
-  public AgentTool_holidays getCanadaHolidays() {
-    return new AgentToolFactory_holidays().create(new HolidaysApiToolConfiguration());
+  public LLMTool_holidays getCanadaHolidays() {
+    return new LLMToolFactory_holidays().create(new HolidaysApiToolConfiguration());
   }
 
   @Bean
-  public AgentTool_sectionFormatGet getTopStories() {
+  public LLMTool_sectionFormatGet getTopStories() {
     var config = new StoriesApiToolConfiguration();
     var apiKey = System.getenv("NYTIMES_API_KEY");
     config.setApiKey(apiKey);
-    return new AgentToolFactory_sectionFormatGet().create(config);
+    return new LLMToolFactory_sectionFormatGet().create(config);
   }
 
   @Bean

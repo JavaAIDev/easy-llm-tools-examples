@@ -5,7 +5,7 @@
 
     <groupId>com.javaaidev.easyllmtools.tools</groupId>
     <artifactId>get-weather</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.4</version>
     <packaging>jar</packaging>
 
     <name>GetWeather</name>
@@ -20,8 +20,8 @@
     <dependencies>
         <dependency>
             <groupId>com.javaaidev.easyllmtools</groupId>
-            <artifactId>agent-tool-spec</artifactId>
-            <version>0.1.0</version>
+            <artifactId>llm-tool-spec</artifactId>
+            <version>0.1.4</version>
         </dependency>
     </dependencies>
 
