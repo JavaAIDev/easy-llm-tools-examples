@@ -12,6 +12,7 @@ import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMTool
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMTool_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiToolConfiguration;
 import io.github.cdimascio.dotenv.Dotenv;
+import io.github.cdimascio.dotenv.DotenvBuilder;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.model.function.DefaultFunctionCallbackResolver;
 import org.springframework.context.ApplicationContext;
@@ -21,7 +22,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfiguration {
 
-  final Dotenv dotenv = Dotenv.load();
+  final Dotenv dotenv = new DotenvBuilder().ignoreIfMalformed().ignoreIfMissing().load();
 
   @Bean
   public SimpleLoggerAdvisor simpleLoggerAdvisor() {
