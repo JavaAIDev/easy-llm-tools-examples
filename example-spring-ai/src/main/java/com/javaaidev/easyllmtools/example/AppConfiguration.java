@@ -11,6 +11,7 @@ import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMToolFactory_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMTool_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiToolConfiguration;
+import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.model.function.DefaultFunctionCallbackResolver;
 import org.springframework.context.ApplicationContext;
@@ -19,6 +20,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfiguration {
+
+  final Dotenv dotenv = Dotenv.load();
 
   @Bean
   public SimpleLoggerAdvisor simpleLoggerAdvisor() {
@@ -40,7 +43,7 @@ public class AppConfiguration {
   @Bean
   public LLMTool_sectionFormatGet getTopStories() {
     var config = new StoriesApiToolConfiguration();
-    var apiKey = System.getenv("NYTIMES_API_KEY");
+    var apiKey = dotenv.get("NYTIMES_API_KEY");
     config.setApiKey(apiKey);
     return new LLMToolFactory_sectionFormatGet().create(config);
   }
