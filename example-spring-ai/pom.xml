@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.javaaidev.easyllmtools</groupId>
     <artifactId>examples</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
   </parent>
 
   <artifactId>example-spring-ai</artifactId>
@@ -70,17 +70,17 @@
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
       <artifactId>get-weather</artifactId>
-      <version>0.1.4</version>
+      <version>0.1.5</version>
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
       <artifactId>canada-holidays</artifactId>
-      <version>0.1.4</version>
+      <version>0.1.5</version>
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
       <artifactId>nytimes</artifactId>
-      <version>0.1.4</version>
+      <version>0.1.5</version>
     </dependency>
   </dependencies>
 
