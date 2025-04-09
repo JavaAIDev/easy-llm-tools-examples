@@ -19,6 +19,7 @@
     <spring-boot.version>3.4.4</spring-boot.version>
     <spring-ai.version>1.0.0-M5</spring-ai.version>
     <easy-llm-tools.version>0.1.7</easy-llm-tools.version>
+    <llm-agent-spec.version>0.1.0</llm-agent-spec.version>
   </properties>
 
   <dependencyManagement>
@@ -60,13 +61,18 @@
       <version>3.1.0</version>
     </dependency>
     <dependency>
-      <groupId>com.javaaidev</groupId>
+      <groupId>com.javaaidev.chatagentui</groupId>
       <artifactId>chat-agent-ui</artifactId>
-      <version>0.5.1</version>
+      <version>0.11.0</version>
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools</groupId>
       <artifactId>integration-spring-ai</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.javaaidev.llmagentspec</groupId>
+      <artifactId>spring-ai-adapter</artifactId>
+      <version>${llm-agent-spec.version}</version>
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
