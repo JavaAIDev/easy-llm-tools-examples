@@ -6,17 +6,19 @@
   <parent>
     <groupId>com.javaaidev.easyllmtools</groupId>
     <artifactId>examples</artifactId>
-    <version>0.1.5</version>
+    <version>0.1.0</version>
   </parent>
 
   <artifactId>example-spring-ai</artifactId>
+  <name>Example :: Spring AI</name>
 
   <properties>
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring-boot.version>3.4.2</spring-boot.version>
+    <spring-boot.version>3.4.4</spring-boot.version>
     <spring-ai.version>1.0.0-M5</spring-ai.version>
+    <easy-llm-tools.version>0.1.7</easy-llm-tools.version>
   </properties>
 
   <dependencyManagement>
@@ -65,22 +67,21 @@
     <dependency>
       <groupId>com.javaaidev.easyllmtools</groupId>
       <artifactId>integration-spring-ai</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
       <artifactId>get-weather</artifactId>
-      <version>0.1.5</version>
+      <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
       <artifactId>canada-holidays</artifactId>
-      <version>0.1.5</version>
+      <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
       <artifactId>nytimes</artifactId>
-      <version>0.1.5</version>
+      <version>0.1.0</version>
     </dependency>
   </dependencies>
 

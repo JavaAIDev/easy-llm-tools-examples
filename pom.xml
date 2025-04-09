@@ -6,16 +6,38 @@
   <parent>
     <groupId>com.javaaidev.easyllmtools</groupId>
     <artifactId>easyllmtools-parent</artifactId>
-    <version>0.1.5</version>
+    <version>0.1.0</version>
   </parent>
 
   <packaging>pom</packaging>
   <modules>
     <module>example-spring-ai</module>
     <module>tool-get-weather-fake</module>
+    <module>example-mcp</module>
   </modules>
   <artifactId>examples</artifactId>
   <name>Examples</name>
+  <properties>
+    <easy-llm-tools.version>0.1.7</easy-llm-tools.version>
+  </properties>
 
-
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.javaaidev.easyllmtools</groupId>
+        <artifactId>llm-tool-spec</artifactId>
+        <version>${easy-llm-tools.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.javaaidev.easyllmtools</groupId>
+        <artifactId>integration-spring-ai</artifactId>
+        <version>${easy-llm-tools.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.javaaidev.easyllmtools</groupId>
+        <artifactId>integration-mcp</artifactId>
+        <version>${easy-llm-tools.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>

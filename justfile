@@ -4,12 +4,12 @@ build:
     mvn -B -ntp -DskipTests package
 
 downloadCodeGeneratorCli:
-    mvn dependency:copy -Dartifact=com.javaaidev.easyllmtools:code-generator-cli:0.1.5 -DoutputDirectory=target -Dmdep.stripVersion=true
+    mvn dependency:copy -Dartifact=com.javaaidev.easyllmtools:code-generator-cli:0.1.0 -DoutputDirectory=target -Dmdep.stripVersion=true
 
 generateCodeGetWeather: downloadCodeGeneratorCli
     java -jar target/code-generator-cli.jar simple \
       --output=tool-get-weather-fake \
-      --artifact-id=get-weather --artifact-version=0.1.5 \
+      --artifact-id=get-weather --artifact-version=0.1.0 \
       --package-name=com.javaaidev.easyllmtools.tools.getweather \
       get-weather.json
 
@@ -19,7 +19,7 @@ installGetWeather:
 generateCodeCanadaHolidays: downloadCodeGeneratorCli
     java -jar target/code-generator-cli.jar openapi \
         --output=target/canada-holidays \
-        --artifact-id=canada-holidays --artifact-version=0.1.5 \
+        --artifact-id=canada-holidays --artifact-version=0.1.0 \
         --package-name=com.javaaidev.easyllmtools.tools.canadaholidays \
         canada-holidays.openapi.json
 
@@ -29,7 +29,7 @@ installCodeCanadaHolidays: generateCodeCanadaHolidays
 generateCodeNytimes: downloadCodeGeneratorCli
     java -jar target/code-generator-cli.jar openapi \
         --output=target/nytimes \
-        --artifact-id=nytimes --artifact-version=0.1.5 \
+        --artifact-id=nytimes --artifact-version=0.1.0 \
         --package-name=com.javaaidev.easyllmtools.tools.nytimes \
         nytimes-top_stories.json
 
