@@ -48,7 +48,9 @@ public class ToolsController {
     var messages = ModelAdapter.fromRequest(request);
     return ModelAdapter.toStreamingResponse(chatClient.prompt()
         .messages(messages.toArray(new Message[0]))
-        .functions("sectionFormatGet")
+        .system(
+            "When using a tool to execution code, remember that code is executed in a container. Always write files to the current directory.")
+        .functions("ExecutePythonCode")
         .stream().chatResponse()
     );
   }

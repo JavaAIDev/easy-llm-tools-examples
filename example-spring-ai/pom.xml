@@ -18,7 +18,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-boot.version>3.4.4</spring-boot.version>
     <spring-ai.version>1.0.0-M5</spring-ai.version>
-    <easy-llm-tools.version>0.1.7</easy-llm-tools.version>
     <llm-agent-spec.version>0.1.0</llm-agent-spec.version>
   </properties>
 
@@ -88,6 +87,31 @@
       <groupId>com.javaaidev.easyllmtools.tools</groupId>
       <artifactId>nytimes</artifactId>
       <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.javaaidev.llmcodeexecutor</groupId>
+      <artifactId>tool-java</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.javaaidev.llmcodeexecutor</groupId>
+      <artifactId>tool-python</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents.client5</groupId>
+      <artifactId>httpclient5</artifactId>
+      <version>5.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents.core5</groupId>
+      <artifactId>httpcore5</artifactId>
+      <version>5.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents.core5</groupId>
+      <artifactId>httpcore5-h2</artifactId>
+      <version>5.0.3</version>
     </dependency>
   </dependencies>
 

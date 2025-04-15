@@ -9,6 +9,9 @@ spring:
         options:
           model: gpt-4o-mini
           temperature: 0.0
+  http:
+    client:
+      factory: JDK
 logging:
   level:
     org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG

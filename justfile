@@ -4,7 +4,7 @@ build:
     mvn -B -ntp -DskipTests package
 
 downloadCodeGeneratorCli:
-    mvn dependency:copy -Dartifact=com.javaaidev.easyllmtools:code-generator-cli:0.1.0 -DoutputDirectory=target -Dmdep.stripVersion=true
+    mvn dependency:copy -Dartifact=com.javaaidev.easyllmtools:code-generator-cli:0.1.9 -DoutputDirectory=target -Dmdep.stripVersion=true
 
 generateCodeGetWeather: downloadCodeGeneratorCli
     java -jar target/code-generator-cli.jar simple \

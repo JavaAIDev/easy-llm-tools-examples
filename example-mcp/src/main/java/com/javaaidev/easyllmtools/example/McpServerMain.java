@@ -26,7 +26,7 @@ public class McpServerMain {
         .serverInfo("easy-llm-tools-example", "1.0.0")
         .capabilities(ServerCapabilities.builder()
             .logging()
-            .tools(true)
+            .tools(false)
             .build())
         .tools(
             mcpToolHelper.toAsyncTool(topStoriesTool())

@@ -11,6 +11,8 @@ import com.javaaidev.easyllmtools.tools.getweather.model.GetWeatherConfiguration
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMToolFactory_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiLLMToolkit.LLMTool_sectionFormatGet;
 import com.javaaidev.easyllmtools.tools.nytimes.api.StoriesApiToolConfiguration;
+import com.javaaidev.llmcodeexecutor.executor.java.ExecuteCode;
+import com.javaaidev.llmcodeexecutor.executor.model.ExecuteCodeConfiguration;
 import io.github.cdimascio.dotenv.Dotenv;
 import io.github.cdimascio.dotenv.DotenvBuilder;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
@@ -47,6 +49,17 @@ public class AppConfiguration {
     var apiKey = dotenv.get("NYTIMES_API_KEY");
     config.setApiKey(apiKey);
     return new LLMToolFactory_sectionFormatGet().create(config);
+  }
+
+  @Bean
+  public ExecuteCode javaExecuteCode() {
+    return new ExecuteCode(new ExecuteCodeConfiguration());
+  }
+
+  @Bean
+  public com.javaaidev.llmcodeexecutor.executor.python.ExecuteCode pythonExecuteCode() {
+    return new com.javaaidev.llmcodeexecutor.executor.python.ExecuteCode(
+        new ExecuteCodeConfiguration());
   }
 
   @Bean

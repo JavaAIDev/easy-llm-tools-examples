@@ -18,7 +18,7 @@
   <artifactId>examples</artifactId>
   <name>Examples</name>
   <properties>
-    <easy-llm-tools.version>0.1.7</easy-llm-tools.version>
+    <easy-llm-tools.version>0.1.9</easy-llm-tools.version>
   </properties>
 
   <dependencyManagement>
