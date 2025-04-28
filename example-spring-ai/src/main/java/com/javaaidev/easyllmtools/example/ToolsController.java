@@ -50,7 +50,7 @@ public class ToolsController {
         .messages(messages.toArray(new Message[0]))
         .system(
             "When using a tool to execution code, remember that code is executed in a container. Always write files to the current directory.")
-        .functions("ExecutePythonCode")
+        .tools("ExecutePythonCode")
         .stream().chatResponse()
     );
   }

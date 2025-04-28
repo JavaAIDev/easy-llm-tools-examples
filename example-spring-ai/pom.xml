@@ -17,7 +17,7 @@
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-boot.version>3.4.4</spring-boot.version>
-    <spring-ai.version>1.0.0-M5</spring-ai.version>
+    <spring-ai.version>1.0.0-M7</spring-ai.version>
     <llm-agent-spec.version>0.1.0</llm-agent-spec.version>
   </properties>
 
@@ -43,7 +43,7 @@
   <dependencies>
     <dependency>
       <groupId>org.springframework.ai</groupId>
-      <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+      <artifactId>spring-ai-starter-model-openai</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
